@@ -1,7 +1,6 @@
 //import fetch from "node-fetch";
-let data = []
+const ol = document.querySelector("#bob");
 
-var responseText = document.getElementById('response');
 
 function createDataElement(data) {
     const el = document.createElement("li");
@@ -18,9 +17,16 @@ async function getUsers() {
         .map(element => createDataElement(element))
     ol.innerHTML = "";
     elements.forEach(el => ol.appendChild(el));
+    // ol.innerHTML += ol.innerHTML;
 };
 
+function clearList() {
+    const ol = document.querySelector("#bob");
+    ol.innerHTML = "";
+}
 
 
-console.log(data);
 
+function debug() {
+    document.querySelector("ol li:nth-child(4)").className = "danger"
+}
